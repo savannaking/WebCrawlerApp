@@ -29,9 +29,10 @@ namespace WebCrawlerApp
 
         public void Crawl(string startingUrl)
         {
-            crawlDepthCounter++;
             if (crawlDepthCounter > crawlDepth)
                 return;
+
+            crawlDepthCounter++;
 
             var uri = new Uri(startingUrl);
             HtmlWeb web = new HtmlWeb();
